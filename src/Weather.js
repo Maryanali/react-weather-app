@@ -3,7 +3,7 @@ import "./Weather.css";
 
 export default function Weather(){
   return (  
-    <div className="App">
+   
     <div class="container">
       <div class="weather-app-border">
         <div class="weather-app">
@@ -28,7 +28,6 @@ export default function Weather(){
               </div>
             </div>
           </form>
-        </div>
         <div class="weather-app-spacing2">
           <ul>
             <li id="temperature-description">Description</li>
@@ -201,9 +200,13 @@ export default function Weather(){
             </div>
           </div>
         </div>
+        </div>
+        <small>
+      This project was created by {" "} <a href="https://github.com/Maryanali" target="_blank">Maryan Ali </a> {" "}
+      and is {" "} <a href="https://github.com/Maryanali/react-web-app" target="_blank">Open Source on Github</a> 
+    </small>
       </div>
-    </div>
-    </div>
+    </div>  
   );
   
  

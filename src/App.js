@@ -8,10 +8,7 @@ export default function App() {
 
     
     <Weather />
-    <footer>
-      This project was created by {" "} <a href="https://github.com/Maryanali" target="_blank">Maryan Ali </a> {" "}
-      and is {" "} <a href="https://github.com/Maryanali/react-web-app" target="_blank">Open Source on Github</a> 
-    </footer>
+   
     </div>
   );
   
