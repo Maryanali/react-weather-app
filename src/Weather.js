@@ -1,11 +1,12 @@
 import React, {useState} from "react";
 import "./Weather.css";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props){
   const [weatherData, setWeatherData] = useState({ready: false});
+
   function handleResponse(response){
-    console.log(response.data);
     console.log(response.data);
     setWeatherData({
       ready: true,
@@ -15,7 +16,7 @@ export default function Weather(props){
       pressure:response.data.main.pressure,
       description:response.data.weather[0].description,
       city:response.data.name,
-      date: "Wednesday 7:00"
+      date: new Date(response.data.dt * 1000)
     });
     
   }
@@ -49,9 +50,7 @@ export default function Weather(props){
           <ul>
             <li id="temperature-description">{weatherData.description}</li>
             <li>
-              {" "}
-              Last updated:
-              <span id="date"> {weatherData.date}</span>
+                <FormattedDate date={weatherData.date} />
             </li>
           </ul>
         </div>
@@ -61,7 +60,6 @@ export default function Weather(props){
               <img
                 src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
                 width="100"
-                alt="Icon of current weather"
                 alt="clear"
                 className="float-left"
                 id="icon"
@@ -217,15 +215,15 @@ export default function Weather(props){
         </div>
         </div>
         <small>
-      This project was created by {" "} <a href="https://github.com/Maryanali" target="_blank">Maryan Ali </a> {" "}
-      and is {" "} <a href="https://github.com/Maryanali/react-web-app" target="_blank">Open Source on Github</a> 
+      This project was created by {" "} <a href="https://www.github.com/Maryanali" target="_blank">Maryan Ali </a> {" "}
+      and is {" "} <a href="https://www.github.com/Maryanali/react-web-app" target="_blank">Open Source on Github</a> 
     </small>
       </div>
     </div>  
   );
   } else{
   const apiKey = "ac254995f1530b05133bdf3b89d170a4";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultcity}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleResponse);
 
   return "Loading..."
