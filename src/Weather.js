@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "./Weather.css";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
+//import WeatherIcon from "./WeatherIcon";
 
 export default function Weather(props){
   const [weatherData, setWeatherData] = useState({ready: false});
@@ -17,7 +18,8 @@ export default function Weather(props){
       pressure:response.data.main.pressure,
       description:response.data.weather[0].description,
       city:response.data.name,
-      date: new Date(response.data.dt * 1000)
+      date: new Date(response.data.dt * 1000),
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     });  
   }
   function search(){
@@ -74,13 +76,15 @@ export default function Weather(props){
         <div className="row">
           <div className="col-6">
             <div className="clearfix weather-temperature">
+              
               <img
-                src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
+                src={weatherData.iconUrl}
                 width="100"
                 alt="clear"
                 className="float-left"
                 id="icon"
-              />
+              /> 
+
               <strong className="temperature" id="temperature">
                 {" "}
                 {Math.round(weatherData.temperature)}
