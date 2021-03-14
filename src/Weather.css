@@ -75,8 +75,9 @@ li {
   margin-bottom: 30px;
 }
 
-.weather-temperature img {
+.weather-temperature canvas {
   margin-right: 10px;
+  margin-top: 5px;
   height: 60px;
   width: 60px;
   vertical-align: top;
