@@ -76,7 +76,7 @@ li {
 }
 
 .weather-temperature canvas {
-  margin-right: 5px;
+  margin-right: 15px;
   margin-top: 7px;
   height: 50px;
   width: 50px;

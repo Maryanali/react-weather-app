@@ -79,10 +79,10 @@ export default function Weather(props){
           <div className="col-6">
             <div className="clearfix weather-temperature float-left">
 
-              
-              <WeatherIcon code={weatherData.icon} />
-
-              <WeatherTemperature celsius={weatherData.temperature} />
+              <div className="d-flex weather-temperature">
+            <WeatherIcon code={weatherData.icon} />
+            <WeatherTemperature celsius={weatherData.temperature} />
+              </div>
               
             </div>
           </div>
@@ -98,8 +98,8 @@ export default function Weather(props){
        <WeatherForecast city={weatherData.city}/>
         </div>
         <small>
-      This project was created by {" "} <a href="https://www.github.com/Maryanali" target="_blank">Maryan Ali </a> {" "}
-      and is {" "} <a href="https://www.github.com/Maryanali/react-web-app" target="_blank">Open Source on Github</a> 
+      This project was created by {" "} <span href="https://www.github.com/Maryanali" target="_blank">Maryan Ali </span> {" "}
+      and is {" "} <span href="https://www.github.com/Maryanali/react-web-app" target="_blank">Open Source on Github</span> 
     </small>
       </div>
     </div>  
