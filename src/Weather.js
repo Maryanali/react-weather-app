@@ -4,6 +4,7 @@ import axios from "axios";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props){
   const [weatherData, setWeatherData] = useState({ready: false});
@@ -94,128 +95,7 @@ export default function Weather(props){
             </ul>
           </div>
         </div>
-        <div className="row weather-forecast" id="forecast">
-          <div className="col-2">
-            <h3>12:00</h3>
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-              alt=""
-            />
-            <div className="weather-forecast-temperature">
-              <strong>16°</strong> 15°
-            </div>
-          </div>
-          <div className="col-2">
-            <h3>15:00</h3>
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-              alt=""
-            />
-            <div className="weather-forecast-temperature">
-              <strong>16°</strong> 15°
-            </div>
-          </div>
-          <div className="col-2">
-            <h3>18:00</h3>
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-              alt=""
-            />
-            <div className="weather-forecast-temperature">
-              <strong>16°</strong> 15°
-            </div>
-          </div>
-          <div className="col-2">
-            <h3>21:00</h3>
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-              alt=""
-            />
-            <div className="weather-forecast-temperature">
-              <strong>16°</strong> 15°
-            </div>
-          </div>
-          <div className="col-2">
-            <h3>00:00</h3>
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-              alt=""
-            />
-            <div className="weather-forecast-temperature">
-              <strong>16°</strong> 15°
-            </div>
-          </div>
-          <div className="col-2">
-            <h3>03:00</h3>
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-              alt=""
-            />
-            <div className="weather-forecast-temperature">
-              <strong>16°</strong> 15°
-            </div>
-          </div>
-          <div className="col-2">
-            <h3>06:00</h3>
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-              alt=""
-            />
-            <div className="weather-forecast-temperature">
-              <strong>16°</strong> 15°
-            </div>
-          </div>
-          <div className="col-2">
-            <h3>09:00</h3>
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-              alt=""
-            />
-            <div className="weather-forecast-temperature">
-              <strong>16°</strong> 15°
-            </div>
-          </div>
-          <div className="col-2">
-            <h3>12:00</h3>
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-              alt=""
-            />
-            <div className="weather-forecast-temperature">
-              <strong>16°</strong> 15°
-            </div>
-          </div>
-          <div className="col-2">
-            <h3>15:00</h3>
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-              alt=""
-            />
-            <div className="weather-forecast-temperature">
-              <strong>16°</strong> 15°
-            </div>
-          </div>
-          <div className="col-2">
-            <h3>18:00</h3>
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-              alt=""
-            />
-            <div className="weather-forecast-temperature">
-              <strong>16°</strong> 15°
-            </div>
-          </div>
-          <div className="col-2">
-            <h3>21:00</h3>
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-              alt=""
-            />
-            <div className="weather-forecast-temperature">
-              <strong>16°</strong> 15°
-            </div>
-          </div>
-        </div>
+       <WeatherForecast city={weatherData.city}/>
         </div>
         <small>
       This project was created by {" "} <a href="https://www.github.com/Maryanali" target="_blank">Maryan Ali </a> {" "}

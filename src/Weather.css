@@ -54,7 +54,7 @@ li {
   margin: 35px auto;
   padding: 40px;
   border-radius: 35px;
-  background-color: rgb(12, 112, 146, 0.6);
+  background-color: rgb(191, 220, 255, 0.6);
 }
 
 .weather-app-border {
@@ -96,8 +96,8 @@ li {
 }
 
 .btn {
-  background-color: #66b9d5;
-  border: #66b9d5;
+  background-color: #96c4fb;
+  border: #96c4fb;
 }
 
 .weather-temperature .active {
